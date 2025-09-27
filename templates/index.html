@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bert AI - Created by Raval Dhwanil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ✅ Fixed Animated Background -->
+    <div class="background">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="chat-container">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="header-content">
+                <div class="bot-avatar">
+                    <div class="avatar-ring">
+                        <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Bert&backgroundColor=f1f5f9" alt="Bert">
+                    </div>
+                    <div class="status-indicator"></div>
+                </div>
+                <div class="bot-info">
+                    <h3>Bert</h3>
+                    <p>AI by Raval Dhwanil • Online</p>
+                </div>
+            </div>
+            <button class="menu-btn">
+                <i class="fas fa-ellipsis-v"></i>
+            </button>
+        </div>
+
+        <!-- Chat Messages -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="welcome-message">
+                <div class="welcome-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h2>Welcome, Friend! 🤝</h2>
+                <p>I'm <b>Bert</b>, a smart AI chatbot created by <b>Raval Dhwanil</b>. Ask me anything!</p>
+                
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <i class="fas fa-bolt"></i>
+                        <span>Fast Answers</span>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-paint-brush"></i>
+                        <span>Modern UI</span>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-music"></i>
+                        <span>Interactive Sounds</span>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-file-upload"></i>
+                        <span>File Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Replies -->
+        <div class="quick-replies" id="quickReplies"></div>
+
+        <!-- Input -->
+        <div class="chat-input-container">
+            <div class="input-wrapper">
+                <button class="attach-btn" onclick="document.getElementById('fileInput').click()">
+                    <i class="fas fa-paperclip"></i>
+                </button>
+                <input type="file" id="fileInput" style="display:none;" accept=".png,.jpg,.jpeg,.gif,.pdf,.doc,.docx,.txt,.csv,.xlsx">
+                <input type="text" id="messageInput" placeholder="Type a message..." autocomplete="off">
+                <button class="send-btn" id="sendBtn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Typing Indicator -->
+    <div id="typingIndicator" class="typing-indicator" style="display:none;">
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+    </div>
+
+    <!-- Sounds -->
+    <audio id="sendSound" src="{{ url_for('static', filename='sounds/send.mp3') }}"></audio>
+    <audio id="receiveSound" src="{{ url_for('static', filename='sounds/receive.mp3') }}"></audio>
+    <audio id="clickSound" src="{{ url_for('static', filename='sounds/click.mp3') }}"></audio>
+    
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

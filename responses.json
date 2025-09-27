@@ -1,0 +1,29 @@
+{
+    "ai_teacher": {
+        "patterns": [
+            "who teaches ai", 
+            "who teaches ai in class f", 
+            "ai teacher",
+            "class f ai teacher", 
+            "who is ai teacher",
+            "teacher of ai class f"
+        ],
+        "responses": [
+            "Prof. Devang J. Bhatt 👨‍🏫"
+        ]
+    },
+
+    "it_hod": {
+        "patterns": [
+            "who is head of department of it", 
+            "who is hod of it", 
+            "head of it department", 
+            "hod it", 
+            "it hod",
+            "hod of it branch"
+        ],
+        "responses": [
+            "Prof. Dhaval R. Chandarana 🎓"
+        ]
+    }
+}
