@@ -1,33 +1,7 @@
 Flask==2.3.2
+gunicorn==20.1.0
 fuzzywuzzy==0.18.0
 python-Levenshtein==0.21.1
+nltk==3.9.1
 Werkzeug==2.3.6
-gunicorn==20.1.0
-def load_responses():
-    try:
-        with open('responses.json', 'r', encoding='utf-8') as f:
-            return json.load(f)
-    except:
-        return get_default_responses()
 
-def get_default_responses():
-    return {
-        # ---- NEW FACULTY QUESTIONS ----
-        "ai_teacher": {
-            "patterns": [
-                "who teaches ai",
-                "who teaches ai in class f",
-                "ai teacher", "ai class f teacher",
-                "teacher of ai", "teacher of ai class f"
-            ],
-            "responses": ["Prof. Devang J. Bhatt 👨‍🏫"]
-        },
-        "it_hod": {
-            "patterns": [
-                "who is head of department of it",
-                "who is hod of it",
-                "it hod", "hod it department",
-                "it department head", "head of it branch"
-            ],
-            "responses": ["Prof. Dhaval R. Chandarana 🎓"]
-        },
